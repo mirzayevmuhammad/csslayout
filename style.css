@@ -40,12 +40,25 @@ body {
   gap: 15px;
 }
 
+.buttons .button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #153e5ce3;
+  animation: showRight 1s ease-in forwards;
+  z-index: 100;
+}
+
 .buttons button {
   width: 150px;
   height: 35px;
   border-radius: 25px;
   border: 2px solid #f51fb5;
   background-color: #e731b1;
+  letter-spacing: 2px;
 }
 
 .buttons button:hover {
@@ -77,6 +90,7 @@ body {
   height: 35px;
   border-radius: 25px;
   font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .home .first {
@@ -86,8 +100,27 @@ body {
   margin-right: 17px;
 }
 
+.home .first:hover {
+  background-color: #e60ca4;
+  border: 2px solid #f51fb5;
+}
+
 .home .second {
   color: #fff;
   border: 2px solid #f51fb5;
   background-color: #e731b1;
 }
+
+.home .second:hover {
+  border: 2px solid #fff;
+
+  background: transparent;
+}
+
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
+}
+
+
